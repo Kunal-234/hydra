@@ -1,0 +1,298 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient-left {
+  background: linear-gradient(-125deg, #8176af 35%, #c0b7e8 74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-right {
+  background: linear-gradient(125deg, #8176af 35%, #c0b7e8 74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 1300px) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  @apply bg-bgColor text-white h-full;
+}
+
+.max-width {
+  @apply max-w-[1440px] mx-auto;
+}
+
+.padding-x {
+  @apply px-5 xl:px-10 md:px-5 lg:px-10;
+}
+
+.arrow-icon {
+  @apply hidden object-contain w-[70px] cursor-pointer xl:block lg:block;
+}
+.arrow-long-icon {
+  @apply hidden object-contain w-[150px] cursor-pointer xl:block lg:block ml-2;
+}
+
+.arrow-hover {
+  @apply transform -translate-y-0 right-0 hover:-translate-x-[10%] transition-transform duration-500;
+}
+
+.button-gradient {
+  @apply rounded-full bg-gradient-to-r from-secondary to-light text-bgColor font-bold px-10 my-7 py-4 w-full lg:w-56 xl:w-56;
+}
+
+.button-hover {
+  @apply hover:text-white/55;
+}
+
+.gradient-circle {
+  @apply bg-gradient-radial;
+}
+
+/* Swiper Styles */
+.swiper-slider {
+  @apply w-full h-full flex items-center mx-5 gap-3;
+}
+
+.nav-btn {
+  @apply absolute z-20 select-none bg-light bg-opacity-30 cursor-pointer p-1  rounded-full transition duration-500 ease-in-out;
+}
+
+.nav-btn:hover {
+  @apply bg-secondary;
+}
+
+.nav-btn.custom-prev-button {
+  top: 30%;
+  left: 1em;
+}
+
+.nav-btn.custom-next-button {
+  right: 1em;
+  top: 30%;
+}
+
+/* Hero Section  */
+.image-hero {
+  @apply w-[600px] xl:w-full lg:w-full md:w-full rounded-[90px] rounded-bl-[200px] border-[15px] border-black border-opacity-20;
+}
+
+.hero-container {
+  @apply flex flex-col-reverse xl:flex-row sm:flex-col-reverse md:flex-col-reverse lg:flex-row w-full items-center justify-between gap-10;
+}
+
+.feature-image {
+  @apply w-[60px] mx-auto;
+}
+
+.line {
+  @apply h-[65px] bg-light p-[1px] opacity-25;
+}
+
+/* Feature Mobile styles */
+
+.slider-main-container {
+  @apply relative rounded-full p-7 mt-10;
+}
+
+.feature-image-mobile {
+  @apply w-[40px] items-center;
+}
+
+/* About Section  */
+.about-image {
+  @apply flex-1 xl:w-[400px] lg:w-[400px] w-full rounded-[50px] rounded-tl-[200px] rounded-br-[200px];
+}
+
+.about-section {
+  @apply flex flex-col xl:flex-row lg:flex-row items-center xl:text-left justify-between gap-5;
+}
+
+.h1-style {
+  @apply text-2xl xl:text-4xl lg:text-3xl  mx-auto xl:mx-0 lg:mx-0  uppercase font-bold opacity-80;
+}
+
+.h2-style {
+  @apply text-3xl xl:text-3xl lg:text-3xl pr-5 mx-auto xl:mx-0 lg:mx-0 uppercase  font-extralight opacity-80;
+}
+
+.p-style {
+  @apply text-sm text-light leading-6;
+}
+
+/* Services Styles */
+.services-h2 {
+  @apply text-2xl font-bold uppercase;
+}
+
+.services-image {
+  @apply object-contain rounded-full border-[10px] border-black/20 border-opacity-25;
+}
+
+.service-button-image {
+  @apply object-contain;
+}
+
+.nav-btn-service {
+  @apply absolute z-20 select-none bg-gradient-to-br from-secondary to-light text-bgColor border-4 border-black border-opacity-50 cursor-pointer p-3 rounded-full transition duration-500 ease-in-out;
+}
+
+.nav-btn-service:hover {
+  @apply text-light;
+}
+
+.nav-btn-service.custom-prev-button {
+  top: 40%;
+  left: 0.1em;
+}
+
+.nav-btn-service.custom-next-button {
+  top: 40%;
+  right: 0.1em;
+}
+
+.line-card {
+  @apply p-[0.5px] bg-secondary my-5 w-[60%] mx-auto opacity-50;
+}
+
+/* Technologies Styles */
+
+.technologies-image-bg {
+  background: url("./assets/technologies.png");
+  object-fit: cover;
+}
+
+.technologies-image {
+  @apply w-[200px]  object-contain mx-auto;
+}
+
+.circle-gradient {
+  @apply bg-gradient-to-br from-secondary to-light text-bgColor  items-center rounded-full transition duration-500 ease-in-out;
+}
+
+.nav-btn-technologies {
+  @apply absolute z-20 p-3 border-4 border-black/50;
+}
+
+.nav-btn-technologies.prev-button {
+  top: 45%;
+  left: 1em;
+}
+
+.nav-btn-technologies.next-button {
+  top: 45%;
+  right: 1em;
+}
+
+/* How To Styles */
+
+.how-to {
+  @apply flex flex-col  mx-auto;
+}
+
+.how-to-number-container {
+  @apply border-black border-[15px] border-opacity-50 rounded-full  cursor-pointer mx-auto;
+}
+.how-to-image {
+  @apply object-contain w-[150px]  mx-auto;
+}
+
+.arrow-text-container {
+  @apply flex  items-center  mt-10;
+}
+
+.howto-arrow-image {
+  @apply w-[60px] object-contain relative bottom-3 cursor-pointer;
+}
+
+.howto-text {
+  @apply font-semibold xl:text-base lg:text-base md:text-base text-2xl text-white/75 mx-auto xl:mx-0 lg:mx-0;
+}
+
+.how-to-button.number-prev-button {
+  top: 82%;
+  left: 1em;
+}
+
+.how-to-button.number-next-button {
+  top: 82%;
+  right: 1em;
+}
+
+.how-to-button {
+  @apply absolute z-20 select-none  bg-gradient-to-br from-secondary to-light text-bgColor cursor-pointer p-4 hover:text-light  rounded-full transition duration-500 ease-in-out;
+}
+
+/* Form Styles  */
+
+.form-field {
+  @apply w-full mx-auto flex flex-col gap-5 pt-5;
+}
+
+.form-input-container {
+  @apply w-full flex xl:flex-row lg:flex-row flex-col gap-5 p-2;
+}
+
+.form-input {
+  @apply w-full xl:w-[550px] lg:w-[350px] md:w-[600px] p-3 pl-5 py-3 rounded-full bg-transparent border-2 border-light;
+}
+.form-input:focus {
+  @apply outline-none;
+}
+
+.last-name:focus {
+  @apply outline-none;
+}
+
+.subject-field {
+  @apply w-full  p-3  pl-5 py-3  rounded-full bg-transparent border-2 border-light;
+}
+
+.subject-field:focus {
+  @apply outline-none;
+}
+
+.text-area {
+  @apply w-full rounded-[30px] pl-5 pt-5 bg-transparent border-2 border-light;
+}
+
+.text-area:focus {
+  @apply outline-none;
+}
+
+.line-contact {
+  @apply w-[20%] p-[0.5px] bg-gradient-to-br from-secondary to-light my-5 opacity-50;
+}
+
+/* Footer Section Styles */
+
+.footer-hide {
+  @apply hidden md:block xl:block lg:block;
+}
+
+.footer-line {
+  @apply mx-auto;
+}
+
+.footer-section {
+  @apply text-white/80 uppercase font-semibold flex flex-col gap-5;
+}
+
+.footer-logo {
+  @apply w-[140px] object-contain mx-auto;
+}
+
+.full-line {
+  @apply w-full p-[.5px] my-10 opacity-50 bg-secondary;
+}
+
+.footer-credit {
+  @apply text-center py-10 text-light uppercase font-semibold text-xs tracking-wider;
+}
